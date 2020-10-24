@@ -41,11 +41,23 @@ class _mBodyState extends State<MyBody> {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisSize: MainAxisSize.max,
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        Text(
-          '$count'
+        Container(
+          padding: EdgeInsets.all(40),
+          
+          decoration: BoxDecoration(
+              color: Colors.lightGreenAccent,
+              borderRadius: BorderRadius.circular(30)),
+          margin: EdgeInsets.all(20),
+          child: Text(
+            '$count',
+            style: TextStyle(fontSize: 30, color: Colors.blueGrey),
+          ),
         ),
         RaisedButton(
+          color: Colors.blueGrey,
           child: Text("ClickMe"),
           onPressed: click,
         )
